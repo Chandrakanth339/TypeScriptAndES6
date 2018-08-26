@@ -87,8 +87,8 @@ const book = new Book('Book', 'JOHN DOE', '2013');
 
 // Adding fields or methods to the object - which is accessible using . or [] operator
 // in Browser you could find the declaration under __proto__ field of this object
-Book.prototype.getSummary = function(){
-    return 'This book '+ this.name+' was authored by '+ this.author+' in the year '+this.year;
+Book.prototype.getSummary = function () {
+    return 'This book ' + this.name + ' was authored by ' + this.author + ' in the year ' + this.year;
 };
 
 
@@ -105,25 +105,22 @@ let applyVal = function (a) {
 console.log(applyVal(3));
 
 // Constructor prototyping
-function Magazine(name, author, year, month){
-    Book.apply(this,[name, author, year]);
+function Magazine(name, author, year, month) {
+    Book.apply(this, [name, author, year]);
     this.month = month;
 }
 
 // _proto_ field will have right-hand side's object
 Magazine.prototype = Object.create(Book.prototype);
 
-const magazine = new Magazine('BOOK2', 'Jane Doe', '2016','May');
+const magazine = new Magazine('BOOK2', 'Jane Doe', '2016', 'May');
 // To use prototype's constructor on left hand side-- we can define an object 
 // within prototype
 Magazine.prototype.construct = Magazine;
 console.log(magazine);
-console.log("Prototype method of Magazine: "+magazine.getSummary());
- 
+console.log("Prototype method of Magazine: " + magazine.getSummary());
+
 magazine.name = 'banda';
 
 console.log(Book.prototype);
-
-
-
 
