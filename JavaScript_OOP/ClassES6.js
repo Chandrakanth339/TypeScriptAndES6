@@ -1,21 +1,21 @@
-class Book{
-    constructor(title, author, year){
+class Book {
+    constructor(title, author, year) {
         this.title = title;
         this.author = author;
         this.year = year;
     }
-    getDetails(){
-        return 'This book, '+this.title+" was authored by "+this.author+" in year, "+this.year; 
+    getDetails() {
+        return 'This book, ' + this.title + " was authored by " + this.author + " in year, " + this.year;
     }
 }
 
-var book = new Book('Java SE','Joshua Bloch', '2018');
+var book = new Book('Java SE', 'Joshua Bloch', '2018');
 console.log(book);
 
 // Subclass:
-class Magazine extends Book{
-    constructor(title, author, year){
-        super(title,author,year);
+class Magazine extends Book {
+    constructor(title, author, year) {
+        super(title, author, year);
     }
     // getDetails(){
     //      return 'bambi';
@@ -23,8 +23,5 @@ class Magazine extends Book{
 }
 
 
-var subC = new Magazine('A','Z','2k19');
+var subC = new Magazine('A', 'Z', '2k19');
 console.log(subC.getDetails());
-
-
-

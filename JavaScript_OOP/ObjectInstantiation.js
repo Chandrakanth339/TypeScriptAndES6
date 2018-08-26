@@ -10,7 +10,7 @@ const circle = {
     },
     // Using Fat Arrow, declaring an anonymous function.
     draw: (argumentz) => {
-        console.log('Function call : draw ('+argumentz+')');
+        console.log('Function call : draw (' + argumentz + ')');
     }
 }
 // circle.draw('Circle');
@@ -33,9 +33,9 @@ objectsample.newarg = 8;
 
 console.log("\n/\/\/\/\/\/\/\/\/\/\/\ Object instantiation using new KeyWord /\/\/\/\/\/\/\/\/\/\/\/\/");
 //DOT NOTATION
-console.log("Dot Notation to access fields/properties and methods "+objectsample.newarg);
+console.log("Dot Notation to access fields/properties and methods " + objectsample.newarg);
 // Bracket notation to get the fields/properties and methods
-console.log("Bracket Notation to access fields/properties and methods "+objectsample['newarg']);
+console.log("Bracket Notation to access fields/properties and methods " + objectsample['newarg']);
 
 // Empty Object instantiation using {} object literal notation
 var objectEmpty = {};
@@ -45,15 +45,15 @@ console.log("Empty Object Creation " + objectEmpty);
 // console.log("\n/\/\/\/\/\/\/\/\/\/\/\ Object instantiation using Object.create(o: object) method /\/\/\/\/\/\/\/\/\/\/\/\/");
 
 // Factory method - Using Functions -- Helps in reducing redundant code and increase reusability
-function createObject(radius){
+function createObject(radius) {
     return {
         radius: radius,
         location: {
             x: 5,
             y: 4
         },
-        draw : () => {
-            console.log("To Draw the circle with radius "+radius);
+        draw: () => {
+            console.log("To Draw the circle with radius " + radius);
         }
     }
 }
@@ -63,10 +63,10 @@ const newObject = createObject(2);
 newObject.draw();
 
 // Class declaration - as per ES5 using function
-function Circle2(radius){
+function Circle2(radius) {
     this.radius = radius;
-    this.draw = ()=>{
-        console.log("Constructer Object Instantiation "+this.radius);
+    this.draw = () => {
+        console.log("Constructer Object Instantiation " + this.radius);
     }
 }
 const circle2 = new Circle2(4);
@@ -75,30 +75,14 @@ console.log(circle2);
 
 // Using Object.create with object reference
 var circle3 = Object.create(circle2);
-circle3.additionalParam='abc';
+circle3.additionalParam = 'abc';
 console.log(circle3);
 
-var circle4 = Object.create(circle3,{
-releaseDate: {value: '2019'}});
+var circle4 = Object.create(circle3, {
+    releaseDate: {
+        value: '2019'
+    }
+});
 
 
 console.log(circle4);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

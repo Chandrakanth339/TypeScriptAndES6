@@ -124,15 +124,39 @@ magazine.name = 'banda';
 
 console.log(Book.prototype);
 
+let animal = {
+    walk: () => {
+        console.log("WALK")
+    }
+
+}
+
+
 let dog = {
-    bark: true
+    bark: true,
+    __proto__: animal,
+    walk: () => {
+        console.log("walk like a dog");
+    }
 };
 
 let snake = {
     hiss: true
 }
+
 // __proto__ can be used with object references same as Object.Prototype
 dog.__proto__ = snake; // copy snake object as dog's _proto_
-console.log(dog);
-console.log(dog.hiss);
+// console.log(dog);
+// console.log(dog.hiss);
+// console.log(dog);
+dog.walk();
 
+// Prototype Chaining
+let rattlesnake = {
+    crawl: true,
+    __proto__: dog
+};
+
+console.log("Rattle Snake method: " + rattlesnake.crawl);
+// walk method will be taken from Prototype chain
+rattlesnake.walk();
