@@ -73,10 +73,3 @@ function Circle2(radius){
 const circle2 = new Circle2(4);
 circle2.draw();
 console.log(circle2);
-
-// PROTOTYPAL INHERITENCE
-
-
-
-
-

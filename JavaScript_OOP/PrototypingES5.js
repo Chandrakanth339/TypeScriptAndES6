@@ -7,7 +7,6 @@ function Circle(num){
         console.log("Funny");
     }
 }
-
 var circle = new Circle(3);
 // Bracket Accessor - []
 console.log("Field accessor using second variable "+circle['radius'] );
@@ -61,3 +60,22 @@ function e(){
 e();
 console.log("Out of Function Declaration " + a + "\t"+b);
 
+
+
+// Prototype Programming
+function Book(name, author, year){
+    this.name  = name;
+    this.author = author;
+    this.year = year;
+
+    this.getSummary = function(){
+        return 'This book '+this.name;
+        // 'The Book  ${this.name} was authored by ${this.author} in the year ${this.year}';
+    }
+}
+
+// Book.prototype.details = ()=>{
+//     return 'The Book, ${name} was authored by ${author} in the year ${year}';
+// }
+const book = new Book('Book' , 'JOHN DOE', '2013');
+console.log(book.getSummary());
