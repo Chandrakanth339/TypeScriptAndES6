@@ -1,11 +1,10 @@
-class Point
-{
+class Point {
     x1: number;
     x2: number;
 
 
-    draw(){
-        console.log('x1 Value '+ this.x1 +'x2 Value '+this.x2);
+    draw() {
+        console.log('x1 Value ' + this.x1 + 'x2 Value ' + this.x2);
     }
 }
 
