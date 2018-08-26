@@ -69,7 +69,36 @@ function Circle2(radius){
         console.log("Constructer Object Instantiation "+this.radius);
     }
 }
-
 const circle2 = new Circle2(4);
 circle2.draw();
 console.log(circle2);
+
+// Using Object.create with object reference
+var circle3 = Object.create(circle2);
+circle3.additionalParam='abc';
+console.log(circle3);
+
+var circle4 = Object.create(circle3,{
+releaseDate: {value: '2019'}});
+
+
+console.log(circle4);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
