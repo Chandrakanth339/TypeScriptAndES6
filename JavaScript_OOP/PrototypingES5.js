@@ -124,3 +124,15 @@ magazine.name = 'banda';
 
 console.log(Book.prototype);
 
+let dog = {
+    bark: true
+};
+
+let snake = {
+    hiss: true
+}
+// __proto__ can be used with object references same as Object.Prototype
+dog.__proto__ = snake; // copy snake object as dog's _proto_
+console.log(dog);
+console.log(dog.hiss);
+
