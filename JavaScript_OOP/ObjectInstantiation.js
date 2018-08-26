@@ -1,6 +1,7 @@
 // the element defined with {} is said to be an Object in OOJS terminology.
 // Object is defined on the right handside and assigned to const or let or var variable.
 // Direct Declaration of object
+// Object Literal
 const circle = {
     radius: 1,
     location: {
@@ -26,7 +27,7 @@ const circle = {
 // console.log(number);
 
 
-// Cumulative Declaration
+// Using Generic Constructor - Object()
 var objectsample = new Object();
 objectsample.newarg = 8;
 
@@ -36,7 +37,7 @@ console.log("Dot Notation to access fields/properties and methods "+objectsample
 // Bracket notation to get the fields/properties and methods
 console.log("Bracket Notation to access fields/properties and methods "+objectsample['newarg']);
 
-// Empty Object instantiation using {} notation
+// Empty Object instantiation using {} object literal notation
 var objectEmpty = {};
 console.log("Empty Object Creation " + objectEmpty);
 
@@ -57,10 +58,11 @@ function createObject(radius){
     }
 }
 
+// Instantiation and Initialization of object
 const newObject = createObject(2);
 newObject.draw();
 
-// Constructor Function
+// Class declaration - as per ES5 using function
 function Circle2(radius){
     this.radius = radius;
     this.draw = ()=>{
@@ -71,3 +73,10 @@ function Circle2(radius){
 const circle2 = new Circle2(4);
 circle2.draw();
 console.log(circle2);
+
+// PROTOTYPAL INHERITENCE
+
+
+
+
+

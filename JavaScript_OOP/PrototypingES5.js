@@ -1,5 +1,7 @@
 function Circle(num){
-    this.radius = num,
+    let computeMethod = {x:4, y:3};
+    var local = 5;
+    this.radius = num;
     
     draw = () =>{
         console.log("Funny");
@@ -29,4 +31,31 @@ console.log(keyz);
 // To check if a property exists in an object
 if('radius' in circle)
     console.log("Radius property exists in Circle");
+
+// if a variable is defined within the function, then, 
+// it won't be accessible from outside of function
+// it returns value "undefined"
+console.log("Local Variable in Circle object "+circle.local);
+
+Object.defineProperty(circle,'x',{value:0, 
+    // writable: true enables manipulation of object
+    writable:true});
+
+circle.x+= 1;// wont throw error as we are not using 'use strict' mode 
+console.log(circle);
+
+var cir2 = Object.create(Circle);
+console.log(cir2);
+
+let a = 5;
+var b = 6;
+var b  =7;
+const c = 7;
+function e(){
+    let a = 6;
+    var b = 5;
+    console.log("Inside Function Declaration "+ a +"\t"+b);
+}
+e();
+console.log("Out of Function Declaration " + a + "\t"+b);
 
