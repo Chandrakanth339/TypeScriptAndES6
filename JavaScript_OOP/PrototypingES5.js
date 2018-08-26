@@ -68,14 +68,35 @@ function Book(name, author, year){
     this.author = author;
     this.year = year;
 
-    this.getSummary = function(){
-        return 'This book '+this.name;
-        // 'The Book  ${this.name} was authored by ${this.author} in the year ${this.year}';
-    }
+    // this.getSummary = function(){
+    //     return 'This book '+name +" was authored by "+author +" in the year "+year;
+    //     // 'The Book  ${this.name} was authored by ${this.author} in the year ${this.year}';
+    // }
 }
 
 // Book.prototype.details = ()=>{
 //     return 'The Book, ${name} was authored by ${author} in the year ${year}';
 // }
 const book = new Book('Book' , 'JOHN DOE', '2013');
-console.log(book.getSummary());
+
+// Adding fields or methods to the object - which is accessible using . or [] operator
+// in Browser you could find the declaration under __proto__ field of this object
+Book.prototype.getSummary = ()=>{
+    return 'This book '+book.name +" was authored by "+book.author +" in the year "+book.year;
+};
+
+
+console.log(book.getSummary()); 
+console.log(book.name);
+
+var z = {x:5};
+let applyVal = function(a){
+    return this.x + a;
+}
+
+console.log(applyVal(3));
+
+
+
+
+
