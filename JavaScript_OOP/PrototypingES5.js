@@ -47,8 +47,10 @@ console.log(circle);
 var cir2 = Object.create(Circle);
 console.log(cir2);
 
+// Redeclaring let or const variables is not allowed with in same block.
 let a = 5;
 var b = 6;
+// Redeclaring var is allowed at any level within JS file
 var b  =7;
 const c = 7;
 function e(){
